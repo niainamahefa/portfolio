@@ -17,6 +17,9 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { motion } from 'framer-motion'
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 
 
 function Copyright() {
@@ -24,7 +27,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Niaina Portfolio
+                Projets
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -46,12 +49,12 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     heroContent: {
-        padding: theme.spacing(8, 0, 6),
+        padding: theme.spacing(12, 0, 3),
     },
 
     cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+        paddingTop: theme.spacing(2),
+        paddingBottom: theme.spacing(2),
     },
     card: {
         backgroundColor: theme.palette.background.secondary,
@@ -70,25 +73,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Album() {
+export default function Projects() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
             <div className={classes.root}>
-                <AppBar position="static">
+                <AppBar position="fixed">
                     <Toolbar>
-                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                            <MenuIcon />
-                        </IconButton>
                         <Typography variant="h6" className={classes.title}>
-                            N
+                            <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
                         </Typography>
                         <Button color="inherit" href="/about">A propos</Button>
-                        <Button color="inherit">Projets</Button>
-                        <Button color="inherit">Certifications</Button>
-                        <Button color="inherit">Contact</Button>
+                        <Button color="inherit" href="/projects">Projets</Button>
+                        <Button color="inherit" href="/certificates">Certifications</Button>
+                        <Button color="inherit" href="/contact">Contact</Button>
                     </Toolbar>
                 </AppBar>
             </div>
@@ -109,10 +109,10 @@ export default function Album() {
                 {/* Hero unit */}
                 <div className={classes.heroContent}>
                     <Container maxWidth="sm">
-                        <Typography component="h1" variant="h2" align="center" color="secondary" gutterBottom>
-                            MES PROJETS
+                        <Typography component="h4" variant="h4" align="center" style={{ color: '#fff' }} gutterBottom>
+                            <DesktopMacIcon color="secondary"/> MES PROJETS
                         </Typography>
-                        <Typography variant="h6" align="center" color="secondary" paragraph>
+                        <Typography variant="p" align="center" style={{ color: '#919090' }} paragraph>
                             Les différents projets que j'ai réalisé
                         </Typography>
                     </Container>
@@ -138,7 +138,7 @@ export default function Album() {
                                             <GitHubIcon style={{ color: '#EE4437' }} />
                                         </Button>
                                         <Button size="small" color="primary">
-                                            Edit
+                                            <LinkIcon style={{ color: '#EE4437' }} />
                                         </Button>
                                     </CardActions>
                                 </Card>
@@ -161,7 +161,7 @@ export default function Album() {
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                     <Button size="small" color="primary">
-                                        Edit
+                                        <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
                             </Card>
@@ -184,7 +184,7 @@ export default function Album() {
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                     <Button size="small" color="primary">
-                                        Edit
+                                        <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
                             </Card>
@@ -206,9 +206,6 @@ export default function Album() {
                                     <Button size="small" color="primary">
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
-                                    <Button size="small" color="primary">
-                                        Edit
-                                    </Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -228,9 +225,6 @@ export default function Album() {
                                 <CardActions>
                                     <Button size="small" color="primary">
                                         <GitHubIcon style={{ color: '#EE4437' }} />
-                                    </Button>
-                                    <Button size="small" color="primary">
-                                        Edit
                                     </Button>
                                 </CardActions>
                             </Card>
@@ -253,7 +247,7 @@ export default function Album() {
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                     <Button size="small" color="primary">
-                                        Edit
+                                        <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
                             </Card>
