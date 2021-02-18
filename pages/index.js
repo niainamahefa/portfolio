@@ -10,7 +10,6 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Typed from 'react-typed';
-import Particles from 'react-particles-js';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import Head from 'next/head';
@@ -29,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     illustration: {
-        width: "80%"
+        width: "65%"
     },
     buttonGitHub: {
         color: '#fff',
@@ -78,7 +77,7 @@ export default function Album() {
 
                 <Container maxWidth="md" style={{marginTop : '15%'}}>
                     <Grid container spacing={10}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={7}>
                             <Typography variant="h6" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
                                 Hi,
                             </Typography>
@@ -132,9 +131,8 @@ export default function Album() {
                                 </Button>
                             </Typography>
                         </Grid>
-
-                        <Grid item xs={12} sm={6}>
-                            <img className={classes.illustration} src="/images/1.svg" alt="illustration" />
+                        <Grid item xs={12} sm={5}>
+                            <img className={classes.illustration} src="/images/dev.svg" alt="illustration" />
                         </Grid>
                     </Grid>
                 </Container>

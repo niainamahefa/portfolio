@@ -43,21 +43,21 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         display: 'grid',
         flexDirection: 'column',
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
     },
     cardContent: {
         flexGrow: 1,
     },
     image: {
-    width: 10,
-    height: 10,
-  },
-  img: {
-    marginTop :'4%',
-    justifyContent: 'space-between',
-    maxWidth: '15%',
-    maxHeight: '15%',
-  },
+        width: 10,
+        height: 10,
+    },
+    img: {
+        marginTop :'4%',
+        justifyContent: 'space-between',
+        maxWidth: '15%',
+        maxHeight: '15%',
+    },
 }));
 
 
@@ -90,73 +90,96 @@ export default function Projects() {
             }}>
                 {/* Hero unit */}
                 <Container className={classes.cardGrid} maxWidth="md">
-                        <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
-                                    <DesktopMacIcon color="secondary"/>  <Typed
-                              strings={['Projects']}
-                              typeSpeed={70}
-                          />
-                        </Typography>
+                    <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                        <DesktopMacIcon color="secondary"/>  <Typed
+                        strings={['Projects']}
+                        typeSpeed={70}
+                    />
+                    </Typography>
 
-                        <Typography component="p" variant="h5" align="left" paragraph>
-                         <span style={{ color: '#07d88b'}}>__________</span>
-                        </Typography>
-                      
-                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
-                            Source codes are available on GitHub.
-                        </Typography>
+                    <Typography component="p" variant="h5" align="left" paragraph>
+                        <span style={{ color: '#07d88b'}}>__________</span>
+                    </Typography>
+
+                    <Typography  align="left" style={{ color: '#919090' }} paragraph>
+                        Source codes are available on GitHub.
+                    </Typography>
                     {/* End hero unit */}
                     <Grid container spacing={2}>
-                    <Grid item  xs={12} sm={6} md={4}>
-                                <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined"> 
-                                    <CardContent className={classes.cardContent}>
-                                        <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                            Covid-19 tracking
-                                        </Typography>
-                                        <Typography gutterBottom style={{ color: '#fff' }}>
-                                            Personal project using "covid19api" to track coronavirus.
-                                        </Typography>
-                                        <Typography style={{ color: '#919090' }}>
-                                            <img className={classes.img} src="/images/skills/symfony.png" />
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" color="primary" href="https://github.com/niainamahefa/sf5-covid-tracking">
-                                            <GitHubIcon style={{ color: '#EE4437' }} />
-                                        </Button>
-                                        <Button size="small" color="primary" href="https://niaina-covid-tracking.herokuapp.com">
-                                            <LinkIcon style={{ color: '#EE4437' }} />
-                                        </Button>
-                                    </CardActions>
-                                </Card>
+                        <Grid item  xs={12} sm={6} md={4}>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                       Fototra
+                                    </Typography>
+                                    <Typography gutterBottom style={{ color: '#fff' }}>
+                                       Webiste for fototra enterprise.
+                                    </Typography>
+                                    <Typography style={{ color: '#919090' }}>
+                                        <img className={classes.img} src="/images/skills/symfony.png" />
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary" href="https://github.com/niainamahefa/sf5-fototra">
+                                        <GitHubIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                    <Button size="small" color="primary" href="https://fototra.herokuapp.com">
+                                        <LinkIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                </CardActions>
+                            </Card>
                         </Grid>
                         <Grid item  xs={12} sm={6} md={4}>
-                                <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined"> 
-                                    <CardContent className={classes.cardContent}>
-                                        <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                            Portfolio
-                                        </Typography>
-                                        <Typography gutterBottom style={{ color: '#fff' }}>
-                                            My personal portfolio.
-                                        </Typography>
-                                        <Typography style={{ color: '#919090' }}>
-                                            <img className={classes.img} src="/images/skills/react.png" />
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" color="primary" href="https://github.com/niainamahefa/portfolio">
-                                            <GitHubIcon style={{ color: '#EE4437' }} />
-                                        </Button>
-                                        <Button size="small" color="primary" href="https://niaina.netlify.app">
-                                            <LinkIcon style={{ color: '#EE4437' }} />
-                                        </Button>
-                                    </CardActions>
-                                </Card>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                        Covid-19 tracking
+                                    </Typography>
+                                    <Typography gutterBottom style={{ color: '#fff' }}>
+                                        Personal project using "covid19api" to track coronavirus.
+                                    </Typography>
+                                    <Typography style={{ color: '#919090' }}>
+                                        <img className={classes.img} src="/images/skills/symfony.png" />
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary" href="https://github.com/niainamahefa/sf5-covid-tracking">
+                                        <GitHubIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                    <Button size="small" color="primary" href="https://niaina-covid-tracking.herokuapp.com">
+                                        <LinkIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item  xs={12} sm={6} md={4}>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                        Portfolio
+                                    </Typography>
+                                    <Typography gutterBottom style={{ color: '#fff' }}>
+                                        My personal portfolio.
+                                    </Typography>
+                                    <Typography style={{ color: '#919090' }}>
+                                        <img className={classes.img} src="/images/skills/react.png" />
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary" href="https://github.com/niainamahefa/portfolio">
+                                        <GitHubIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                    <Button size="small" color="primary" href="https://niaina.netlify.app">
+                                        <LinkIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                </CardActions>
+                            </Card>
                         </Grid>
                         <Grid item  xs={12} sm={6} md={4}>
                             <Card className={classes.card} style={{ backgroundColor: '#0d1727' }}>
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6"  color="secondary">
-                                        Ministry of Communication 
+                                        Ministry of Communication
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
                                         Website for Arts and Artistic Publishing.
@@ -182,7 +205,7 @@ export default function Projects() {
                                         E-commerce website.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        <img className={classes.img} src="/images/skills/wordpress.png" />  
+                                        <img className={classes.img} src="/images/skills/wordpress.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -220,7 +243,7 @@ export default function Projects() {
                                         Mobile application to create and scan Qr Code.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        <img className={classes.img} src="/images/skills/flutter.png" />  
+                                        <img className={classes.img} src="/images/skills/flutter.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -240,7 +263,7 @@ export default function Projects() {
                                         School management web application.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        <img className={classes.img} src="/images/skills/java.png" />  
+                                        <img className={classes.img} src="/images/skills/java.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -254,7 +277,7 @@ export default function Projects() {
                 </Container>
             </motion.main>
 
-             <>
+            <>
                 <Footer/>
             </>
 

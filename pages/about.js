@@ -20,14 +20,7 @@ import Navbar from '../components/Navbar.js';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import CodeIcon from '@material-ui/icons/Code';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import BeenhereIcon from '@material-ui/icons/Beenhere';
-import GradeIcon from '@material-ui/icons/Grade';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
-import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import SportsRugbyIcon from '@material-ui/icons/SportsRugby';
-import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
     root: {
