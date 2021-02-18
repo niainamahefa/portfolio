@@ -17,13 +17,16 @@ import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import {GridList, GridListTile, GridListTileBar, ListSubheader} from "@material-ui/core";
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
+import Typed from 'react-typed';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Certificats
+                Niaina Portfolio
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -47,7 +50,9 @@ const useStyles = makeStyles((theme) => ({
     heroContent: {
         padding: theme.spacing(12, 0, 3),
     },
-
+      titleContent: {
+    marginTop: '8%',
+  },
     cardGrid: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
@@ -91,10 +96,11 @@ export default function Projects() {
                         <Typography variant="h6" className={classes.title}>
                             <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
                         </Typography>
-                        <Button color="inherit" href="/about">A propos</Button>
-                        <Button color="inherit" href="/projects">Projets</Button>
-                        <Button color="inherit" href="/certificates">Certifications</Button>
-                        <Button color="inherit" href="/contact">Contact</Button>
+                          <Button color="inherit" href="/about">A propos</Button>
+                          <Button color="inherit" href="/skills">Compétences</Button>
+                          <Button color="inherit" href="/projects">Projets</Button>
+                          <Button color="inherit" href="/certificates">Certifications</Button>
+                          <Button color="inherit" href="/contact">Contact</Button>
                     </Toolbar>
                 </AppBar>
             </div>
@@ -113,20 +119,24 @@ export default function Projects() {
                 }
             }}>
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
-                    <Container maxWidth="sm">
-                        <Typography component="h4" variant="h4" align="center" style={{ color: '#fff' }} gutterBottom>
-                            <CardMembershipIcon color="secondary" /> MES CERTIFICATS
+
+                <Container className={classes.titleContent} maxWidth="md">
+                <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                            <CardMembershipIcon color="secondary"/>  <Typed
+                      strings={['Mes certificats']}
+                      typeSpeed={70}
+                  />
                         </Typography>
-                        <Typography variant="p" align="center" style={{ color: '#919090' }} paragraph>
+
+                        <Typography component="p" variant="h5" align="left" paragraph>
+                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                        </Typography>
+                      
+                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
                             Certifications SoloLearn
                         </Typography>
-                    </Container>
-                </div>
-
-                <Container>
                     <div className={classes.gridContent}>
-                        <GridList cellHeight={180} className={classes.gridList}>
+                        <GridList cellHeight={300} className={classes.gridList}>
                             <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
                                 <ListSubheader component="div">December</ListSubheader>
                             </GridListTile>
@@ -230,11 +240,9 @@ export default function Projects() {
                     </div>
                 </Container>
             </motion.main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Copyright />
-            </footer>
-            {/* End footer */}
+             <>
+          <Footer/>
+        </>
         </React.Fragment>
     );
 }

@@ -16,14 +16,17 @@ import {Avatar} from "@material-ui/core";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
-
+import Typed from 'react-typed';
+import Grid from '@material-ui/core/Grid';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
 function Copyright() {
   return (
       <Typography variant="body2" color="textSecondary" align="center">
         {'Copyright © '}
         <Link color="inherit" href="https://material-ui.com/">
-          A propos
+           Niaina Portfolio
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
@@ -35,9 +38,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  aboutContent: {
-    width: '100%',
-    marginTop: '5%'
+  titleContent: {
+    marginTop: '8%',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -48,12 +50,23 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
-  heroContent: {
-    padding: theme.spacing(12, 0, 3),
+  avatarContent: {
+   marginTop: '5%',
+  },
+  aboutContent: {
+   marginTop: '3%',
   },
   avatar: {
     width: theme.spacing(20),
     height: theme.spacing(20),
+  },
+  buttonGitHub: {
+    margin: theme.spacing(1),
+  },
+  buttonLinkedIn: {
+    margin: theme.spacing(1),
+    color:"#fff",
+    backgroundColor: "#0077b5"
   },
 
     footer: {
@@ -69,19 +82,9 @@ export default function Projects() {
   return (
       <React.Fragment>
         <CssBaseline />
-        <div className={classes.root}>
-          <AppBar position="fixed">
-            <Toolbar>
-              <Typography variant="h6" className={classes.title}>
-                <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
-              </Typography>
-              <Button color="inherit" href="/about">A propos</Button>
-              <Button color="inherit" href="/projects">Projets</Button>
-              <Button color="inherit" href="/certificates">Certifications</Button>
-              <Button color="inherit" href="/contact">Contact</Button>
-            </Toolbar>
-          </AppBar>
-        </div>
+        <>
+          <Navbar/>
+        </>
         <motion.main initial ="hidden" animate="visible" variants= {{
           hidden: {
             scale: .8,
@@ -96,22 +99,30 @@ export default function Projects() {
             }
           }
         }}>
-          {/* Hero unit */}
-          <div className={classes.heroContent}>
-            <Container maxWidth="sm">
-              <Typography component="h4" variant="h4" align="center" style={{ color: '#fff' }} gutterBottom>
-                <InfoIcon color="secondary"/> A MON PROPOS
-              </Typography>
-              <Typography variant="p" align="center" style={{ color: '#919090' }} paragraph>
 
-              </Typography>
-            </Container>
-          </div>
-          <Container maxWidth="sm">
-            <div className={classes.avatarContent} align="center">
+          {/* Hero unit */}
+          <Container className={classes.titleContent} maxWidth="md" > 
+          <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                            <InfoIcon color="secondary"/>  <Typed
+                      strings={['A mon propos']}
+                      typeSpeed={70}
+                  />
+
+                        </Typography>
+
+                        <Typography component="p" variant="h5" align="left" paragraph>
+                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                        </Typography>
+
+                        <Typography align="left" style={{ color: '#919090' }} paragraph>
+                          
+                        </Typography>
+
+            <Container maxWidth ="small">
+            <div className={classes.avatarContent} align="left">
               <Avatar alt="Avatar" src="/images/avatar.jpg" className={classes.avatar} />
             </div>
-            <div className={classes.aboutContent} align="center" style={{ color: '#919090' }}>
+            <div className={classes.aboutContent} align="left" style={{ color: '#919090' }}>
               <Typography variant="body1" gutterBottom>
                 Je m'appelle <span style={{ color: '#07d88b', fontWeight: 'bold' }}>Andriamahefa Lovaniaina</span> , je vis à Madagascar.
               </Typography>
@@ -127,28 +138,37 @@ export default function Projects() {
                 Dans ce portfolio que j'ai réalisé, je vais vous présenter mes compétences , ainsi que les
                 projets que j'ai réalisé.
               </Typography>
-              <Typography variant="body1" gutterBottom>
-                Pour toute question, n’hésitez pas à me contacter.
-              </Typography>
-              <div align="center" style={{ marginTop: '5%' }}>
-                <Button size="large"  href="https://github.com/niainamahefa">
-                  <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}><GitHubIcon style={{ color: '#EE4437' }} /></motion.div>
-                </Button>
-                <Button size="large" href="https://github.com/niainamahefa">
-                  <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}> <LinkedInIcon style={{ color: '#EE4437' }}/></motion.div>
-                </Button>
-                <Button size="large"  href="https://github.com/niainamahefa">
-                  <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}><FacebookIcon style={{ color: '#EE4437' }}/></motion.div>
-                </Button>
-              </div>
+           
+                <Grid container spacing={20} justify="left">
+                  <Grid item>
+                    <Button
+                        href="https://github.com/niainamahefa"
+                        variant="contained"
+                        color="default"
+                        className={classes.buttonGitHub}
+                        startIcon={<GitHubIcon />}
+                    >
+                      GitHub
+                    </Button>
+                    <Button
+                        href="https://www.linkedin.com/in/niaina-mahefa/"
+                        variant="contained"
+                        className={classes.buttonLinkedIn}
+                        startIcon={<LinkedInIcon />}
+                    >
+                      LinkedIn
+                    </Button>
+                  </Grid>
+                </Grid>
             </div>
+            </Container>
           </Container>
         </motion.main>
-        {/* Footer */}
-        <footer className={classes.footer}>
-          <Copyright />
-        </footer>
-        {/* End footer */}
+       
+        <>
+          <Footer/>
+        </>
+
       </React.Fragment>
   );
 }

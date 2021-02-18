@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,24 +20,22 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ButtonAppBar() {
+export default function Navbar() {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        N
-                    </Typography>
-                    <Button color="inherit" href="/about">A propos</Button>
-                    <Button color="inherit">Projets</Button>
-                    <Button color="inherit">Certifications</Button>
-                    <Button color="inherit">Contact</Button>
-                </Toolbar>
+            <AppBar position="fixed">
+                    <Toolbar>
+                        <Typography variant="h6" className={classes.title}>
+                            <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
+                        </Typography>
+                        <Button color="inherit" href="/about">A propos</Button>
+                      <Button color="inherit" href="/skills">Compétences</Button>
+                      <Button color="inherit" href="/projects">Projets</Button>
+                      <Button color="inherit" href="/certificates">Certifications</Button>
+                      <Button color="inherit" href="/contact">Contact</Button>
+                    </Toolbar>
             </AppBar>
         </div>
     );

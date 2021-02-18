@@ -14,19 +14,9 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Typed from 'react-typed';
 import Particles from 'react-particles-js';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
-function Copyright() {
-  return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          A propos
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,26 +57,16 @@ export default function Album() {
   return (
       <React.Fragment>
         <CssBaseline />
-        <div className={classes.root}>
-          <AppBar position="fixed">
-            <Toolbar>
-              <Typography variant="h6" className={classes.title}>
-                <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
-              </Typography>
-              <Button color="inherit" href="/about">A propos</Button>
-              <Button color="inherit" href="/projects">Projets</Button>
-              <Button color="inherit" href="/certificates">Certifications</Button>
-              <Button color="inherit" href="/contact">Contact</Button>
-            </Toolbar>
-          </AppBar>
-        </div>
+        <>
+          <Navbar/>
+        </>
         <main>
           <Particles
               canvasClassName={classes.particlesCanvas}
             params={{
               particles: {
                 number: {
-                  value: 45,
+                  value: 25,
                   density: {
                     enable: true,
                     value_area:900
@@ -121,7 +101,7 @@ export default function Album() {
               <Typography variant="h6" align="center" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
                 Bonjour,
               </Typography>
-              <Typography component="h1" variant="h1" align="center" style={{ color: '#07d88b', fontWeight: 'bold' }} gutterBottom>
+              <Typography  variant="h2" align="center" style={{ color: '#07d88b', fontWeight: 'bold' }} gutterBottom>
                   <Typed
                       strings={['Je suis Niaina']}
                       typeSpeed={40}
@@ -161,11 +141,11 @@ export default function Album() {
             </Container>
           </Grid>
         </main>
-        {/* Footer */}
-        <footer className={classes.footer}>
-          <Copyright />
-        </footer>
-        {/* End footer */}
+
+        <>
+          <Footer/>
+        </>
+
       </React.Fragment>
   );
 }

@@ -23,13 +23,16 @@ import InfoIcon from '@material-ui/icons/Info';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import Typed from 'react-typed';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Contact
+                Niaina Portfolio
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -50,24 +53,8 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         marginRight: theme.spacing(2),
     },
-    heroContent: {
-        padding: theme.spacing(12, 0, 3),
-    },
-
-    cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-    },
-    card: {
-        backgroundColor: theme.palette.background.secondary,
-        height: '100%',
-        width: '100%',
-        display: 'grid',
-        flexDirection: 'column',
-        padding: theme.spacing(3),
-    },
-    cardContent: {
-        flexGrow: 1,
+    titleContent: {
+        marginTop: '8%'
     },
     footer: {
         padding: theme.spacing(6),
@@ -81,19 +68,9 @@ export default function Projects() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <div className={classes.root}>
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
-                        </Typography>
-                        <Button color="inherit" href="/about">A propos</Button>
-                        <Button color="inherit" href="/projects">Projets</Button>
-                        <Button color="inherit" href="/certificates">Certifications</Button>
-                        <Button color="inherit" href="/contact">Contact</Button>
-                    </Toolbar>
-                </AppBar>
-            </div>
+            <>
+                <Navbar/>
+             </>
             <motion.main initial ="hidden" animate="visible" variants= {{
                 hidden: {
                     scale: .8,
@@ -109,25 +86,27 @@ export default function Projects() {
                 }
             }}>
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
-                    <Container maxWidth="sm">
-                        <Typography component="h4" variant="h4" align="center" style={{ color: '#fff' }} gutterBottom>
-                            <ContactPhoneIcon color="secondary" widths="510%"/> ME CONTACTER
-                        </Typography>
-                        <Typography variant="p" align="center" style={{ color: '#919090' }} paragraph>
-                            Veuillez remplir le formulaire ci-dessous
-                        </Typography>
-                    </Container>
-                </div>
-                <Container  maxWidth="md">
+                <Container className={classes.titleContent} maxWidth="md">
+                    <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                             <ContactPhoneIcon color="secondary"/>   <Typed
+                      strings={['Me contacter']}
+                      typeSpeed={70}
+                  />
 
+                        </Typography>
+
+                        <Typography component="p" variant="h5" align="left" paragraph>
+                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                        </Typography>
+
+                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
+                           Pour toute question, n’hésitez pas à me contacter.
+                        </Typography>
                 </Container>
             </motion.main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Copyright />
-            </footer>
-            {/* End footer */}
+             <>
+                <Footer/>
+            </>
         </React.Fragment>
     );
 }

@@ -20,6 +20,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
+import Typed from 'react-typed';
+import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
 
 function Copyright() {
@@ -27,7 +30,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Projets
+                Niaina Portfolio
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -48,27 +51,21 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         marginRight: theme.spacing(2),
     },
-    heroContent: {
-        padding: theme.spacing(12, 0, 3),
-    },
-
     cardGrid: {
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
+        marginTop: '8%',
+        marginBottom: theme.spacing(5),
     },
     card: {
+        marginTop: '10%',
         backgroundColor: theme.palette.background.secondary,
-        height: '100%',
-        width: '100%',
-        display: 'grid',
+        height: '105%',
+        width: '105%',
+        display: 'flex',
         flexDirection: 'column',
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
     },
     cardContent: {
         flexGrow: 1,
-    },
-    footer: {
-        padding: theme.spacing(6),
     },
 }));
 
@@ -79,19 +76,9 @@ export default function Projects() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <div className={classes.root}>
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
-                        </Typography>
-                        <Button color="inherit" href="/about">A propos</Button>
-                        <Button color="inherit" href="/projects">Projets</Button>
-                        <Button color="inherit" href="/certificates">Certifications</Button>
-                        <Button color="inherit" href="/contact">Contact</Button>
-                    </Toolbar>
-                </AppBar>
-            </div>
+            <>
+                <Navbar/>
+            </>
             <motion.main initial ="hidden" animate="visible" variants= {{
                 hidden: {
                     scale: .8,
@@ -107,21 +94,26 @@ export default function Projects() {
                 }
             }}>
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
-                    <Container maxWidth="sm">
-                        <Typography component="h4" variant="h4" align="center" style={{ color: '#fff' }} gutterBottom>
-                            <DesktopMacIcon color="secondary"/> MES PROJETS
+                <Container className={classes.cardGrid} maxWidth="md">
+                <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                            <DesktopMacIcon color="secondary"/>  <Typed
+                      strings={['Mes projets']}
+                      typeSpeed={70}
+                  />
                         </Typography>
-                        <Typography variant="p" align="center" style={{ color: '#919090' }} paragraph>
+
+                        <Typography component="p" variant="h5" align="left" paragraph>
+                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                        </Typography>
+                      
+                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
                             Les différents projets que j'ai réalisé
                         </Typography>
-                    </Container>
-                </div>
-                <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
-                    <Grid container spacing={2}>
+                    <Container maxWidth ="md">
+                    <Grid container spacing={3}>
                         <Grid item  xs={12} sm={6} md={4}>
-                                <Card className={classes.card} style={{ backgroundColor: '#152133' }}>
+                                <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h6" component="h2" color="secondary">
                                             Portfolio
@@ -146,8 +138,8 @@ export default function Projects() {
                         <Grid item  xs={12} sm={6} md={4}>
                             <Card className={classes.card} style={{ backgroundColor: '#152133' }}>
                                 <CardContent className={classes.cardContent}>
-                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                        Ministère de la Communication et de la Culture
+                                    <Typography gutterBottom variant="h6"  color="secondary">
+                                        Ministère de la Communication 
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
                                         Site web pour les Arts et la Publication Artistique.
@@ -253,13 +245,14 @@ export default function Projects() {
                             </Card>
                         </Grid>
                     </Grid>
+                    </Container>
                 </Container>
             </motion.main>
-            {/* Footer */}
-            <footer className={classes.footer}>
-                <Copyright />
-            </footer>
-            {/* End footer */}
+            
+             <>
+          <Footer/>
+        </>
+
         </React.Fragment>
     );
 }
