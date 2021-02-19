@@ -16,7 +16,7 @@ import Typed from 'react-typed';
 import Particles from 'react-particles-js';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-
+import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   buttonGitHub: {
-    margin: theme.spacing(1),
+    color: '#fff',
+    textTransform: 'capitalize',
   },
   buttonLinkedIn: {
     margin: theme.spacing(1),
@@ -57,6 +58,10 @@ export default function Album() {
   return (
       <React.Fragment>
         <CssBaseline />
+        <Head>
+                <title>Niaina | Portfolio</title>
+                <link rel="icon" href="/images/favicon.svg" />
+            </Head>
         <>
           <Navbar/>
         </>
@@ -98,16 +103,16 @@ export default function Album() {
                justify="center"
                style={{ minHeight: '100vh' }}>
             <Container maxWidth="md">
-              <Typography variant="h6" align="center" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
+              <Typography variant="h6" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
                 Bonjour,
               </Typography>
-              <Typography  variant="h2" align="center" style={{ color: '#07d88b', fontWeight: 'bold' }} gutterBottom>
+              <Typography  variant="h2" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
                   <Typed
                       strings={['Je suis Niaina']}
                       typeSpeed={40}
                   />
               </Typography>
-              <Typography variant="h4" align="center"  style={{ color: '#919090' }} paragraph>
+              <Typography variant="h5" align="left"  style={{ color: '#919090' }} paragraph>
                 <Typed
                     strings={['Développeur Web', 'Passioné des nouvelles technologies.']}
                     typeSpeed={40}
@@ -116,24 +121,15 @@ export default function Album() {
                 />
               </Typography>
               <div className={classes.heroButtons}>
-                <Grid container spacing={20} justify="center">
+                <Grid container spacing={20} justify="left">
                   <Grid item>
                     <Button
-                        href="https://github.com/niainamahefa"
+                        href="/contact"
                         variant="contained"
-                        color="default"
+                        color="secondary"
                         className={classes.buttonGitHub}
-                        startIcon={<GitHubIcon />}
                     >
-                      GitHub
-                    </Button>
-                    <Button
-                        href="https://www.linkedin.com/in/niaina-mahefa/"
-                        variant="contained"
-                        className={classes.buttonLinkedIn}
-                        startIcon={<LinkedInIcon />}
-                    >
-                      LinkedIn
+                      Me contacter
                     </Button>
                   </Grid>
                 </Grid>

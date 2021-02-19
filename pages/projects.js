@@ -23,6 +23,7 @@ import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import Typed from 'react-typed';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
+import Head from 'next/head';
 
 
 function Copyright() {
@@ -67,6 +68,16 @@ const useStyles = makeStyles((theme) => ({
     cardContent: {
         flexGrow: 1,
     },
+    image: {
+    width: 10,
+    height: 10,
+  },
+  img: {
+    marginTop :'4%',
+    justifyContent: 'space-between',
+    maxWidth: '15%',
+    maxHeight: '15%',
+  },
 }));
 
 
@@ -76,6 +87,10 @@ export default function Projects() {
     return (
         <React.Fragment>
             <CssBaseline />
+            <Head>
+                <title>Projets</title>
+                <link rel="icon" href="/images/favicon.svg" />
+            </Head>
             <>
                 <Navbar/>
             </>
@@ -107,10 +122,9 @@ export default function Projects() {
                         </Typography>
                       
                         <Typography  align="left" style={{ color: '#919090' }} paragraph>
-                            Les différents projets que j'ai réalisé
+                            Les projets que j'ai réalisé. Les codes sources sont disponibles sur GitHub.
                         </Typography>
                     {/* End hero unit */}
-                    <Container maxWidth ="md">
                     <Grid container spacing={3}>
                         <Grid item  xs={12} sm={6} md={4}>
                                 <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
@@ -122,7 +136,7 @@ export default function Projects() {
                                             Mon portfolio personnel.
                                         </Typography>
                                         <Typography style={{ color: '#919090' }}>
-                                            Next.js | React.js
+                                            <img className={classes.img} src="/images/skills/react.png" />
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
@@ -145,7 +159,7 @@ export default function Projects() {
                                         Site web pour les Arts et la Publication Artistique.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        PHP | Symfony
+                                        <img className={classes.img} src="/images/skills/symfony.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -168,7 +182,7 @@ export default function Projects() {
                                         Site e-commerce.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        Wordpress
+                                        <img className={classes.img} src="/images/skills/wordpress.png" />  
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -191,7 +205,7 @@ export default function Projects() {
                                         Application de gestion de cabinet médical.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        PHP | Symfony
+                                        <img className={classes.img} src="/images/skills/symfony.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -211,7 +225,7 @@ export default function Projects() {
                                         Application mobile pour créer et scanner des Qr Code.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        Flutter
+                                        <img className={classes.img} src="/images/skills/flutter.png" />  
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -245,7 +259,6 @@ export default function Projects() {
                             </Card>
                         </Grid>
                     </Grid>
-                    </Container>
                 </Container>
             </motion.main>
             

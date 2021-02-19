@@ -26,6 +26,7 @@ import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import Typed from 'react-typed';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
+import Head from 'next/head';
 
 function Copyright() {
     return (
@@ -68,6 +69,10 @@ export default function Projects() {
     return (
         <React.Fragment>
             <CssBaseline />
+            <Head>
+                <title>Contact</title>
+                <link rel="icon" href="/images/favicon.svg" />
+            </Head>
             <>
                 <Navbar/>
              </>
