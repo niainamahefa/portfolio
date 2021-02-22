@@ -169,18 +169,6 @@ export default function AddressForm() {
                   <Grid item xs={12}>
                     <TextField
                     style={{ backgroundColor: '#334560' }}
-                      required
-                      id="objet"
-                      name="objet"
-                      label="Objet"
-                      variant="outlined"
-                      fullWidth
-                      autoComplete="shipping address-line1"
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                    style={{ backgroundColor: '#334560' }}
                       id="message"
                       name="message"
                       label="Message"
