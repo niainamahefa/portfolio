@@ -161,6 +161,7 @@ export default function Album() {
                             </Button>
                             <Button
                             style={{ color: '#fff'}}
+                             href="https://www.linkedin.com/in/niaina-mahefa"
                             
                             >
                               <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
