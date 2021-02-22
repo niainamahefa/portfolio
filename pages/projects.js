@@ -26,18 +26,6 @@ import Footer from '../components/Footer.js';
 import Head from 'next/head';
 
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Niaina Portfolio
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -89,7 +77,7 @@ export default function Projects() {
         <React.Fragment>
             <CssBaseline />
             <Head>
-                <title>Projets</title>
+                <title>Projects</title>
                 <link rel="icon" href="/images/favicon.svg" />
             </Head>
             <>
@@ -113,17 +101,17 @@ export default function Projects() {
                 <Container className={classes.cardGrid} maxWidth="md">
                         <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
                                     <DesktopMacIcon color="secondary"/>  <Typed
-                              strings={['Mes projets']}
+                              strings={['Projects']}
                               typeSpeed={70}
                           />
                         </Typography>
 
                         <Typography component="p" variant="h5" align="left" paragraph>
-                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                         <span style={{ color: '#07d88b'}}>__________</span>
                         </Typography>
                       
                         <Typography  align="left" style={{ color: '#919090' }} paragraph>
-                            Les projets que j'ai réalisé. Les codes sources sont disponibles sur GitHub.
+                            Source codes are available on GitHub.
                         </Typography>
                     {/* End hero unit */}
                     <Grid container spacing={2}>
@@ -134,17 +122,17 @@ export default function Projects() {
                                             Portfolio
                                         </Typography>
                                         <Typography gutterBottom style={{ color: '#fff' }}>
-                                            Mon portfolio personnel.
+                                            My personal portfolio.
                                         </Typography>
                                         <Typography style={{ color: '#919090' }}>
                                             <img className={classes.img} src="/images/skills/react.png" />
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button size="small" color="primary" href="https://github.com/niainamahefa/nextjs-portfolio">
+                                        <Button size="small" color="primary" href="https://github.com/niainamahefa/portfolio">
                                             <GitHubIcon style={{ color: '#EE4437' }} />
                                         </Button>
-                                        <Button size="small" color="primary">
+                                        <Button size="small" color="primary" href="https://niaina.netlify.app">
                                             <LinkIcon style={{ color: '#EE4437' }} />
                                         </Button>
                                     </CardActions>
@@ -154,10 +142,10 @@ export default function Projects() {
                             <Card className={classes.card} style={{ backgroundColor: '#152133' }}>
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6"  color="secondary">
-                                        Ministère de la Communication 
+                                        Ministry of Communication 
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        Site web pour les Arts et la Publication Artistique.
+                                        Website for Arts and Artistic Publishing.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/symfony.png" />
@@ -180,7 +168,7 @@ export default function Projects() {
                                         E-Vidy
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        Site e-commerce.
+                                        E-commerce website.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/wordpress.png" />  
@@ -203,7 +191,7 @@ export default function Projects() {
                                         Medical Assistance and Health Exploration for All
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        Application de gestion de cabinet médical.
+                                        Medical practice management application.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/symfony.png" />
@@ -220,10 +208,10 @@ export default function Projects() {
                             <Card className={classes.card} style={{ backgroundColor: '#152133' }}>
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                        QrCode Generator
+                                        Qr Code Generator
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        Application mobile pour créer et scanner des Qr Code.
+                                        Mobile application to create and scan Qr Code.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/flutter.png" />  
@@ -243,7 +231,7 @@ export default function Projects() {
                                         Sekoliko
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        Application web de gestion d'école.
+                                        School management web application.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/java.png" />  

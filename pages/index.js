@@ -126,17 +126,17 @@ export default function Album() {
                  style={{ minHeight: '100vh' }}>
               <Container maxWidth="md">
                 <Typography variant="h6" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
-                  Bonjour,
+                  Hi,
                 </Typography>
                 <Typography  variant="h2" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
                     <Typed
-                        strings={['Je suis Niaina']}
+                        strings={["I' m Niaina"]}
                         typeSpeed={40}
                     />
                 </Typography>
                 <Typography variant="h5" align="left"  style={{ color: '#919090' }} paragraph>
                   <Typed
-                      strings={['Développeur Web', 'Passioné des nouvelles technologies.']}
+                      strings={['Web developer', 'Passionate about new technologies.']}
                       typeSpeed={40}
                       backSpeed={60}
                       loop
@@ -148,12 +148,12 @@ export default function Album() {
                           color="secondary"
                           className={classes.buttonGitHub}
                       >
-                        Me contacter
+                        Get in touch
                       </Button>
                       <Typography align="left" style={{marginTop: '5%'}}>
                         <Button
                             style={{ color: '#fff'}}
-                            href="/"
+                            href="https://www.facebook.com/profile.php?id=100008458601591"
                             >
                               <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
                                 <FacebookIcon />
@@ -161,7 +161,7 @@ export default function Album() {
                             </Button>
                             <Button
                             style={{ color: '#fff'}}
-                            href="https://www.linkedin.com/in/niaina-mahefa"
+                            
                             >
                               <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
                                 <LinkedInIcon />

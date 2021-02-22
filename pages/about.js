@@ -33,30 +33,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
-
-
-function LinearProgressWithLabel(props) {
-  return (
-    <Box display="flex" alignItems="center">
-      <Box width="100%" mr={1}>
-        <LinearProgress variant="determinate" {...props} />
-      </Box>
-      <Box minWidth={35}>
-        <Typography variant="body2"  style={{color: '#fff', fontWeight: 'bold'}}>{`${Math.round(
-          props.value,
-        )}%`}</Typography>
-      </Box>
-    </Box>
-  );
-}
-
-LinearProgressWithLabel.propTypes = {
-  /**
-   * The value of the progress indicator for the determinate and buffer variants.
-   * Value between 0 and 100.
-   */
-  value: PropTypes.number.isRequired,
-};
+import CodeIcon from '@material-ui/icons/Code';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -90,6 +68,10 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
   },
 
+    skillsTitle: {
+      marginTop: '5%',
+  },
+
   cardGrid: {
         marginTop: '8%',
         marginBottom: theme.spacing(2),
@@ -105,12 +87,11 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     skillsImage: {
-    width: 50,
-    height: 50,
+    width: 25,
+    height: 25,
   },
   imgSkills: {
-    margin: 'auto',
-    display: 'block',
+
     maxWidth: '100%',
     maxHeight: '100%',
   },
@@ -140,7 +121,7 @@ export default function Projects() {
       <React.Fragment>
         <CssBaseline />
         <Head>
-                <title>A propos</title>
+                <title>About</title>
                 <link rel="icon" href="/images/favicon.svg" />
             </Head>
         <>
@@ -165,7 +146,7 @@ export default function Projects() {
           <Container className={classes.titleContent} maxWidth="md" > 
           <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
                             <InfoIcon color="secondary"/>  <Typed
-                      strings={['A mon propos']}
+                      strings={['About me']}
                       typeSpeed={70}
                   />
 
@@ -179,7 +160,7 @@ export default function Projects() {
                           
           </Typography>
 
-            <div className={classes.root}>
+            <div className={classes.root} style={{marginTop: '5%'}}>
             <Paper className={classes.paper} style={{ backgroundColor: '#152133' }}>
               <Grid container spacing={2}>
                 <Grid item>
@@ -194,15 +175,13 @@ export default function Projects() {
                     <Grid item xs>
                         <div style={{ color: '#919090' }}>
                             <Typography variant="body1" gutterBottom>
-                              Je m'appelle <span style={{ color: '#07d88b', fontWeight: 'bold' }}>Andriamahefa Lovaniaina</span> , je vis à Madagascar.
+                              My name is <span style={{ color: '#07d88b', fontWeight: 'bold' }}>Andriamahefa Lovaniaina</span> , I live in Madagascar.
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                              Passionné par le développement web, j'aime expérimenter,
-                              découvrir et apprendre des nouvelles technologies.
+                              Passionate about web development, I like to experiment, discover and learn new technologies.
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                              Dans ce portfolio que j'ai réalisé, je vais vous présenter mes compétences , ainsi que les
-                              projets que j'ai réalisé.
+                             In this portfolio that I made, I will present my skills to you, as well as the projects that I have carried out.
                             </Typography>
                             <Button
                               href="https://github.com/niainamahefa"
@@ -211,7 +190,7 @@ export default function Projects() {
                               className={classes.buttonGitHub}
                               startIcon={<CloudDownloadIcon />}
                             >
-                              Telecharger mon CV
+                              Resume
                             </Button>
                           </div>
                     </Grid>
@@ -240,52 +219,86 @@ export default function Projects() {
                 {/* Hero unit */}
                 <Container className={classes.cardGrid} maxWidth="md">
                 <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
-                            <DesktopMacIcon color="secondary"/>  <Typed
-                      strings={['Compétences techniques']}
+                            <DesktopMacIcon color="secondary" />  <Typed
+                      strings={['Skills']}
                       typeSpeed={70}
                   />
                         </Typography>
 
                         <Typography component="p"  align="left" paragraph>
-                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                         <span style={{ color: '#07d88b'}}>__________</span>
                         </Typography>
+
+                        <Typography className={classes.skillsTitle} align="left" color="secondary" variant="h6" paragraph>
+                            <FiberManualRecordIcon fontSize="small" /> <span>Operating system</span>
+                        </Typography>
+
+                           <Grid container spacing={2}>
+                              <Grid item  xs={12} sm={6} md={4}>
+                              <Grid container spacing={2}>
+                                <Grid item>
+                                  <ButtonBase className={classes.skillsImage}>
+                                  <img className={classes.imgSkills} alt="complex" src="/images/skills/linux.png" />
+                                  </ButtonBase>
+                                </Grid>
+                                <Grid item xs={12} sm container>
+                                  <Grid item xs container direction="column" spacing={2}>
+                                    <Grid item xs>
+                                      <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                      Linux
+                                      </Typography>
+                                      </Grid>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                          </Grid>
+
+                          <Grid item  xs={12} sm={6} md={4}>
+                            <Grid container spacing={2}>
+                              <Grid item>
+                                <ButtonBase className={classes.skillsImage}>
+                                <img className={classes.imgSkills} alt="complex" src="/images/skills/windows.png" />
+                                </ButtonBase>
+                              </Grid>
+                              <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                  <Grid item xs>
+                                    <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                    Windows
+                                    </Typography>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                          </Grid>
+                        </Grid>
                       
-                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
-                            
+                        <Typography className={classes.skillsTitle} align="left" color="secondary" variant="h6" paragraph>
+                            <FiberManualRecordIcon fontSize="small" /> <span>Language ​& framework</span>
                         </Typography>
+
                     {/* End hero unit */}
                       <Grid container spacing={2}>
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
                               <img className={classes.imgSkills} alt="complex" src="/images/skills/php.png" />
                               </ButtonBase>
                             </Grid>
-                            <Grid item xs={12} sm container>
+                            <Grid item xs={12} sm={6} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
                                   PHP
                                   </Typography>
-                                  <Typography className={classes.progressbar} >
-                                    <LinearProgressWithLabel value={70} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
                         
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -295,24 +308,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Symfony
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={80} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -322,24 +327,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Laravel
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={60} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -349,24 +346,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Python
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={50} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -376,105 +365,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Java
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={45} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
-                          <Grid container spacing={2}>
-                            <Grid item>
-                              <ButtonBase className={classes.skillsImage}>
-                              <img className={classes.imgSkills} alt="complex" src="/images/skills/postgresql.png" />
-                              </ButtonBase>
-                            </Grid>
-                            <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
-                                  PostgreSQL
-                                  </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={62} />
-                                    </Typography>
-                                  </Grid>
-                                </Grid>
-                              </Grid>
-                            </Grid>
-                            </CardContent>
-                            </motion.Card>
-                        </Grid>
-
-                        <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
-                          <Grid container spacing={2}>
-                            <Grid item>
-                              <ButtonBase className={classes.skillsImage}>
-                              <img className={classes.imgSkills} alt="complex" src="/images/skills/mysql.png" />
-                              </ButtonBase>
-                            </Grid>
-                            <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
-                                  MySQL
-                                  </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={85} />
-                                    </Typography>
-                                  </Grid>
-                                </Grid>
-                              </Grid>
-                            </Grid>
-                            </CardContent>
-                            </motion.Card>
-                        </Grid>
-
-                        <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
-                          <Grid container spacing={2}>
-                            <Grid item>
-                              <ButtonBase className={classes.skillsImage}>
-                              <img className={classes.imgSkills} alt="complex" src="/images/skills/flutter.png" />
-                              </ButtonBase>
-                            </Grid>
-                            <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
-                                  Flutter
-                                  </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={65} />
-                                    </Typography>
-                                  </Grid>
-                                </Grid>
-                              </Grid>
-                            </Grid>
-                            </CardContent>
-                            </motion.Card>
-                        </Grid>
-
-                        <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -484,24 +384,35 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Wordpress
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={70} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/flutter.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  Flutter
+                                  </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -511,24 +422,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   React.js
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={30} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -538,51 +441,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Bootstrap
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={80} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
-                          <Grid container spacing={2}>
-                            <Grid item>
-                              <ButtonBase className={classes.skillsImage}>
-                              <img className={classes.imgSkills} alt="complex" src="/images/skills/git.png" />
-                              </ButtonBase>
-                            </Grid>
-                            <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
-                                  Git
-                                  </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={55} />
-                                    </Typography>
-                                  </Grid>
-                                </Grid>
-                              </Grid>
-                            </Grid>
-                            </CardContent>
-                            </motion.Card>
-                        </Grid>
-
-                        <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -592,24 +460,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   Javascript
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={50} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -619,24 +479,16 @@ export default function Projects() {
                             <Grid item xs={12} sm container>
                               <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   HTML
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={90} />
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
                         </Grid>
 
                         <Grid item  xs={12} sm={6} md={4}>
-                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
-                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                          <CardContent className={classes.cardContent}>
                           <Grid container spacing={2}>
                             <Grid item>
                               <ButtonBase className={classes.skillsImage}>
@@ -644,24 +496,193 @@ export default function Projects() {
                               </ButtonBase>
                             </Grid>
                             <Grid item xs={12} sm container>
-                              <Grid item xs container direction="column" spacing={2}>
-                                <Grid item xs>
-                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                             <Typography style={{color: '#fff' ,fontWeight: 'bold'}} gutterBottom  component="h2">
                                   CSS
                                   </Typography>
-                                  <Typography className={classes.pos} color="textSecondary">
-                                  <LinearProgressWithLabel value={90} />
+                              </Grid>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+
+                     <Typography className={classes.skillsTitle} align="left" color="secondary" variant="h6" paragraph>
+                        <FiberManualRecordIcon fontSize="small" /> <span>Server</span>
+                    </Typography>
+
+                    <Grid container spacing={2}>
+                              <Grid item  xs={12} sm={6} md={4}>
+                            <Grid container spacing={2}>
+                              <Grid item>
+                                <ButtonBase className={classes.skillsImage}>
+                                <img className={classes.imgSkills} alt="complex" src="/images/skills/apache.png" />
+                                </ButtonBase>
+                              </Grid>
+                              <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                  <Grid item xs>
+                                    <Typography  style={{color: '#fff' ,color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                    Apache
                                     </Typography>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                          </Grid>
+
+                          <Grid item  xs={12} sm={6} md={4}>
+                            <Grid container spacing={2}>
+                              <Grid item>
+                                <ButtonBase className={classes.skillsImage}>
+                                <img className={classes.imgSkills} alt="complex" src="/images/skills/tomcat.png" />
+                                </ButtonBase>
+                              </Grid>
+                              <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                  <Grid item xs>
+                                    <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                    Tomcat
+                                    </Typography>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                          </Grid>
+                        </Grid>
+
+                      <Typography className={classes.skillsTitle} align="left" color="secondary" variant="h6" paragraph>
+                            <FiberManualRecordIcon fontSize="small" /> <span>Database</span>
+                        </Typography>
+
+                        <Grid container spacing={2}>
+                              <Grid item  xs={12} sm={6} md={4}>
+                            <Grid container spacing={2}>
+                              <Grid item>
+                                <ButtonBase className={classes.skillsImage}>
+                                <img className={classes.imgSkills} alt="complex" src="/images/skills/postgresql.png" />
+                                </ButtonBase>
+                              </Grid>
+                              <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                  <Grid item xs>
+                                    <Typography  style={{color: '#fff' ,color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                    PostgreSQL
+                                    </Typography>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                          </Grid>
+
+                          <Grid item  xs={12} sm={6} md={4}>
+                            <Grid container spacing={2}>
+                              <Grid item>
+                                <ButtonBase className={classes.skillsImage}>
+                                <img className={classes.imgSkills} alt="complex" src="/images/skills/mysql.png" />
+                                </ButtonBase>
+                              </Grid>
+                              <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                  <Grid item xs>
+                                    <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                    MySQL
+                                    </Typography>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                          </Grid>
+                        </Grid>
+
+
+
+                    <Typography className={classes.skillsTitle} align="left" color="secondary" variant="h6" paragraph>
+                        <FiberManualRecordIcon fontSize="small" /> <span>Tools</span>
+                    </Typography>
+
+                    <Grid container spacing={2}>
+                          <Grid item  xs={12} sm={6} md={4}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/git.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  Git
+                                  </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
                             </Grid>
-                            </CardContent>
-                            </motion.Card>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/phpstorm.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  PHPStorm
+                                  </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/webstorm.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  WebStorm
+                                  </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/vscode.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography  style={{color: '#fff' , fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  Visual studio code
+                                  </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
+
+
+
                 </Container>
             </motion.main>
+
+
 
             <motion.main initial ="hidden" animate="visible" variants= {{
                 hidden: {
@@ -680,8 +701,8 @@ export default function Projects() {
                 {/* Hero unit */}
                 <Container className={classes.titleContent} maxWidth="md" >
                 <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
-                            <CardMembershipIcon color="secondary"/>  <Typed
-                      strings={['Certifications']}
+                            <CardMembershipIcon color="secondary" />  <Typed
+                      strings={['Certificates']}
                       typeSpeed={70}
                   />
                         </Typography>
@@ -690,11 +711,11 @@ export default function Projects() {
                          <span style={{ color: '#07d88b'}}>__________</span>
                         </Typography>
                       
-                        <Typography  align="left" style={{ color: '#919090' }} paragraph>
+                        <Typography  align="left" style={{ color: '#EE4437' }} paragraph>
                             
                         </Typography>
                     {/* End hero unit */}
-                    <Grid container spacing={3}>
+                    <Grid container spacing={3} style={{marginTop: '5%'}}>
 						<Grid item  xs={12} sm={6} md={4}>
 							<motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
 								<Link className={classes.certImages} href="https://www.sololearn.com/Certificate/1059-15978578/pdf">

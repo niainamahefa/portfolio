@@ -95,13 +95,13 @@ export default function Navbar() {
                                     <ClickAwayListener onClickAway={handleClose}>
                                       <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                       <Link style={{textDecoration : 'none' }} href="/">
-                                              <MenuItem onClick={handleClose}>Accueil</MenuItem>
+                                              <MenuItem onClick={handleClose}>Home</MenuItem>
                                         </Link>
                                         <Link style={{textDecoration : 'none' }} href="/about">
-                                             <MenuItem onClick={handleClose}>A propos</MenuItem>
+                                             <MenuItem onClick={handleClose}>About</MenuItem>
                                         </Link>
                                         <Link style={{textDecoration : 'none' }} href="/projects">
-                                             <MenuItem onClick={handleClose}>Projets</MenuItem>
+                                             <MenuItem onClick={handleClose}>Projects</MenuItem>
                                         </Link>
                                         <Link style={{textDecoration : 'none' }} href="/contact">
                                              <MenuItem onClick={handleClose}>Contact</MenuItem>

@@ -16,6 +16,7 @@ import Typed from 'react-typed';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 
 
 
@@ -122,8 +123,8 @@ export default function Contact() {
           {/* Hero unit */}
           <Container className={classes.titleContent} maxWidth="md" > 
             <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
-                              <InfoIcon color="secondary"/>  <Typed
-                        strings={['Me contacter']}
+                              <ContactPhoneIcon color="secondary"/>  <Typed
+                        strings={['Get in touch']}
                         typeSpeed={70}
                     />
 
@@ -134,22 +135,23 @@ export default function Contact() {
             </Typography>
 
             <Typography align="left" style={{ color: '#919090' }} paragraph>
-               Pour toute question, n’hésitez pas à me contacter.
+                For any questions, do not hesitate to contact me.
             </Typography>
 
             <div className={classes.root}>
             <Paper className={classes.paper} style={{ backgroundColor: '#152133' }}>
             <Container maxWidth="sm">
-            <form name="contact" data-netlify="true" method="POST">
+             <form name="contact" method="POST">
               <input type="hidden" name="form-name" value="contact" />
                 <Grid container spacing={3} style={{ marginTop : '3%'}}>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       style={{ backgroundColor: '#334560' }}
                       required
-                      id="nom"
-                      name="nom"
-                      label="Nom"
+                      type="text"
+                      id="name"
+                      name="name"
+                      label="Name"
                       variant="outlined"
                       fullWidth
                       autoComplete="given-name"
@@ -159,6 +161,7 @@ export default function Contact() {
                     <TextField
                     style={{ backgroundColor: '#334560' }}
                       required
+                      type="email"
                       id="email"
                       name="email"
                       label="Email"
@@ -170,6 +173,7 @@ export default function Contact() {
                   <Grid item xs={12}>
                     <TextField
                     style={{ backgroundColor: '#334560' }}
+                      type="text"
                       id="message"
                       name="message"
                       label="Message"
