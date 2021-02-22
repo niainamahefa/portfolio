@@ -16,7 +16,7 @@ import Typed from 'react-typed';
 import Particles from 'react-particles-js';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-import Head from 'next/head';
+import Head from 'next/head';  
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  illustration: {
+    width: "90%"
+  },
   buttonGitHub: {
     color: '#fff',
     textTransform: 'capitalize',
@@ -44,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#0077b5"
   },
 
+  heroContent: {
+    padding: theme.spacing(10),
+  },
   heroButtons: {
     marginTop: theme.spacing(4),
   },
@@ -65,7 +71,21 @@ export default function Album() {
         <>
           <Navbar/>
         </>
-        <main>
+        <motion.main initial ="hidden" animate="visible" variants= {{
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        delay: .4
+                    }
+                }
+            }}>
+
           <Particles
               canvasClassName={classes.particlesCanvas}
             params={{
@@ -98,45 +118,81 @@ export default function Album() {
             }}
           />
           {/* Hero unit */}
-          <Grid className={classes.heroContent} container
-               alignItems="center"
-               justify="center"
-               style={{ minHeight: '100vh' }}>
-            <Container maxWidth="md">
-              <Typography variant="h6" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
-                Bonjour,
-              </Typography>
-              <Typography  variant="h2" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
+          <Grid container spacing={3} style={{ marginTop : '3%'}}>
+            <Grid item xs={12} sm={6}>
+              <Grid className={classes.heroContent} container
+                 alignItems="center"
+                 justify="center"
+                 style={{ minHeight: '100vh' }}>
+              <Container maxWidth="md">
+                <Typography variant="h6" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
+                  Bonjour,
+                </Typography>
+                <Typography  variant="h2" align="left" style={{ color: '#fff', fontWeight: 'bold' }} paragraph>
+                    <Typed
+                        strings={['Je suis Niaina']}
+                        typeSpeed={40}
+                    />
+                </Typography>
+                <Typography variant="h5" align="left"  style={{ color: '#919090' }} paragraph>
                   <Typed
-                      strings={['Je suis Niaina']}
+                      strings={['Développeur Web', 'Passioné des nouvelles technologies.']}
                       typeSpeed={40}
+                      backSpeed={60}
+                      loop
                   />
-              </Typography>
-              <Typography variant="h5" align="left"  style={{ color: '#919090' }} paragraph>
-                <Typed
-                    strings={['Développeur Web', 'Passioné des nouvelles technologies.']}
-                    typeSpeed={40}
-                    backSpeed={60}
-                    loop
-                />
-              </Typography>
-              <div className={classes.heroButtons}>
-                <Grid container spacing={20} justify="left">
-                  <Grid item>
-                    <Button
-                        href="/contact"
-                        variant="contained"
-                        color="secondary"
-                        className={classes.buttonGitHub}
-                    >
-                      Me contacter
-                    </Button>
-                  </Grid>
-                </Grid>
-              </div>
+                </Typography>
+                <Button
+                          href="/contact"
+                          variant="contained"
+                          color="secondary"
+                          className={classes.buttonGitHub}
+                      >
+                        Me contacter
+                      </Button>
+                      <Typography align="left" style={{marginTop: '5%'}}>
+                        <Button
+                            style={{ color: '#fff'}}
+                            href="/"
+                            >
+                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
+                                <FacebookIcon />
+                              </motion.div>
+                            </Button>
+                            <Button
+                            style={{ color: '#fff'}}
+                            href="https://www.linkedin.com/in/niaina-mahefa"
+                            >
+                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
+                                <LinkedInIcon />
+                              </motion.div>
+                            </Button>
+                            <Button
+                            style={{ color: '#fff'}}
+                            href="https://github.com/niainamahefa"
+                            >
+                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
+                                <GitHubIcon />
+                              </motion.div>
+                            </Button>
+                      </Typography>
+       
             </Container>
           </Grid>
-        </main>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Grid className={classes.heroContent} container
+                   alignItems="center"
+                   justify="center"
+                   style={{ minHeight: '100vh' }}>
+                <Container maxWidth="md">
+                   <img className={classes.illustration} src="/images/1.svg" alt="illustration" />
+                </Container>
+              </Grid>
+            </Grid>
+          </Grid>  
+          
+        </motion.main>
 
         <>
           <Footer/>

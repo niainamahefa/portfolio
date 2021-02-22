@@ -95,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(2),
     },
     card: {
+      borderRadius: '4%',
         width: '100%',
         display: 'grid',
         flexDirection: 'column',
@@ -160,7 +161,7 @@ export default function Projects() {
           }
         }}>
 
-          {/* Hero unit */}
+          {/* A propos */}
           <Container className={classes.titleContent} maxWidth="md" > 
           <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
                             <InfoIcon color="secondary"/>  <Typed
@@ -380,6 +381,60 @@ export default function Projects() {
                                   </Typography>
                                   <Typography className={classes.pos} color="textSecondary">
                                   <LinearProgressWithLabel value={45} />
+                                    </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                            </CardContent>
+                            </motion.Card>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
+                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
+                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                          <CardContent className={classes.cardContent}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/postgresql.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  PostgreSQL
+                                  </Typography>
+                                  <Typography className={classes.pos} color="textSecondary">
+                                  <LinearProgressWithLabel value={62} />
+                                    </Typography>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                            </CardContent>
+                            </motion.Card>
+                        </Grid>
+
+                        <Grid item  xs={12} sm={6} md={4}>
+                          <motion.Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"
+                          whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                          <CardContent className={classes.cardContent}>
+                          <Grid container spacing={2}>
+                            <Grid item>
+                              <ButtonBase className={classes.skillsImage}>
+                              <img className={classes.imgSkills} alt="complex" src="/images/skills/mysql.png" />
+                              </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                              <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                  <Typography color="secondary" style={{fontWeight: 'bold'}} gutterBottom  component="h2">
+                                  MySQL
+                                  </Typography>
+                                  <Typography className={classes.pos} color="textSecondary">
+                                  <LinearProgressWithLabel value={85} />
                                     </Typography>
                                   </Grid>
                                 </Grid>
@@ -626,13 +681,13 @@ export default function Projects() {
                 <Container className={classes.titleContent} maxWidth="md" >
                 <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
                             <CardMembershipIcon color="secondary"/>  <Typed
-                      strings={['Mes certificats']}
+                      strings={['Certifications']}
                       typeSpeed={70}
                   />
                         </Typography>
 
                         <Typography component="p" variant="h5" align="left" paragraph>
-                         <span style={{ color: '#07d88b', fontSize: '130%' }}>_____________</span>
+                         <span style={{ color: '#07d88b'}}>__________</span>
                         </Typography>
                       
                         <Typography  align="left" style={{ color: '#919090' }} paragraph>

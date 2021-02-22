@@ -18,6 +18,7 @@ import ListIcon from '@material-ui/icons/List';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import AppsIcon from '@material-ui/icons/Apps';
 import { motion } from 'framer-motion'
 
 
@@ -75,30 +76,6 @@ export default function Navbar() {
                             <Button href="/"><img src="/images/favicon.png" alt=""/></Button>
                         </Typography>
                           <div>
-                          <Button
-                            style={{ color: '#fff'}}
-                            href="/"
-                            >
-                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
-                                <FacebookIcon />
-                              </motion.div>
-                            </Button>
-                            <Button
-                            style={{ color: '#fff'}}
-                            href="https://www.linkedin.com/in/niaina-mahefa"
-                            >
-                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
-                                <LinkedInIcon />
-                              </motion.div>
-                            </Button>
-                            <Button
-                            style={{ color: '#fff'}}
-                            href="https://github.com/niainamahefa"
-                            >
-                              <motion.div whileHover={{scale: 1.5}} whileTap={{scale: 0.9}}>
-                                <GitHubIcon />
-                              </motion.div>
-                            </Button>
                             <Button
                             style={{ color: '#fff'}}
                               ref={anchorRef}
@@ -106,7 +83,7 @@ export default function Navbar() {
                               aria-haspopup="true"
                               onClick={handleToggle}
                             >
-                              <ListIcon /> 
+                              <AppsIcon />  Menu
                             </Button>
                             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                               {({ TransitionProps, placement }) => (

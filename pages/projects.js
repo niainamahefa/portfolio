@@ -57,11 +57,12 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(5),
     },
     card: {
+        borderRadius: '2%',
         marginTop: '10%',
         backgroundColor: theme.palette.background.secondary,
-        height: '105%',
-        width: '105%',
-        display: 'flex',
+        height: '100%',
+        width: '100%',
+        display: 'grid',
         flexDirection: 'column',
         padding: theme.spacing(1),
     },
@@ -110,11 +111,11 @@ export default function Projects() {
             }}>
                 {/* Hero unit */}
                 <Container className={classes.cardGrid} maxWidth="md">
-                <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
-                            <DesktopMacIcon color="secondary"/>  <Typed
-                      strings={['Mes projets']}
-                      typeSpeed={70}
-                  />
+                        <Typography component="h4" variant="h4" align="left" style={{ color: '#fff' }} gutterBottom>
+                                    <DesktopMacIcon color="secondary"/>  <Typed
+                              strings={['Mes projets']}
+                              typeSpeed={70}
+                          />
                         </Typography>
 
                         <Typography component="p" variant="h5" align="left" paragraph>
@@ -125,7 +126,7 @@ export default function Projects() {
                             Les projets que j'ai réalisé. Les codes sources sont disponibles sur GitHub.
                         </Typography>
                     {/* End hero unit */}
-                    <Grid container spacing={3}>
+                    <Grid container spacing={2}>
                         <Grid item  xs={12} sm={6} md={4}>
                                 <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
                                     <CardContent className={classes.cardContent}>
@@ -245,7 +246,7 @@ export default function Projects() {
                                         Application web de gestion d'école.
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
-                                        Java | JEE
+                                        <img className={classes.img} src="/images/skills/java.png" />  
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
