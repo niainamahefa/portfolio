@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function AddressForm() {
+export default function Contact() {
    const classes = useStyles();
 
   return (
@@ -140,7 +140,8 @@ export default function AddressForm() {
             <div className={classes.root}>
             <Paper className={classes.paper} style={{ backgroundColor: '#152133' }}>
             <Container maxWidth="sm">
-            <form data-netlify="true" method="POST">
+            <form name="contact" data-netlify="true" method="POST">
+              <input type="hidden" name="form-name" value="contact" />
                 <Grid container spacing={3} style={{ marginTop : '3%'}}>
                   <Grid item xs={12} sm={6}>
                     <TextField
