@@ -1,24 +1,16 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import { motion } from 'framer-motion'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import Typed from 'react-typed';
 import Navbar from '../components/Navbar.js';
@@ -47,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
     card: {
         borderRadius: '2%',
         marginTop: '10%',
-        backgroundColor: theme.palette.background.secondary,
         height: '100%',
         width: '100%',
         display: 'grid',
@@ -250,10 +241,10 @@ export default function Projects() {
                     </Grid>
                 </Container>
             </motion.main>
-            
+
              <>
-          <Footer/>
-        </>
+                <Footer/>
+            </>
 
         </React.Fragment>
     );
