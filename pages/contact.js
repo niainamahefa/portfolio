@@ -111,7 +111,7 @@ export default function Contact() {
 
                     <div className={classes.root}>
                         <Container maxWidth="sm">
-                            <form name="contact" method="POST">
+                            <form name="contact" method="POST" data-netlify="true">
                                 <input type="hidden" name="form-name" value="contact" />
                                 <Grid container spacing={3} style={{ marginTop : '3%'}}>
                                     <Grid item xs={12} sm={6}>
