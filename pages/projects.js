@@ -110,6 +110,27 @@ export default function Projects() {
                                 <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                            Covid-19 tracking
+                                        </Typography>
+                                        <Typography gutterBottom style={{ color: '#fff' }}>
+                                            Personal project using "covid19api" to track coronavirus.
+                                        </Typography>
+                                        <Typography style={{ color: '#919090' }}>
+                                            <img className={classes.img} src="/images/skills/symfony.png" />
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small" color="primary" href="https://github.com/niainamahefa/sf5-covid-tracking">
+                                            <GitHubIcon style={{ color: '#EE4437' }} />
+                                        </Button>
+                                        <Button size="small" color="primary" href="https://dry-shelf-80545.herokuapp.com/">
+                                            <LinkIcon style={{ color: '#EE4437' }} />
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                                <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
+                                    <CardContent className={classes.cardContent}>
+                                        <Typography gutterBottom variant="h6" component="h2" color="secondary">
                                             Portfolio
                                         </Typography>
                                         <Typography gutterBottom style={{ color: '#fff' }}>
