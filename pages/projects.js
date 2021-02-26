@@ -123,7 +123,7 @@ export default function Projects() {
                                         <Button size="small" color="primary" href="https://github.com/niainamahefa/sf5-covid-tracking">
                                             <GitHubIcon style={{ color: '#EE4437' }} />
                                         </Button>
-                                        <Button size="small" color="primary" href="https://dry-shelf-80545.herokuapp.com/">
+                                        <Button size="small" color="primary" href="https://niaina-covid-tracking.herokuapp.com">
                                             <LinkIcon style={{ color: '#EE4437' }} />
                                         </Button>
                                     </CardActions>
