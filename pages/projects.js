@@ -232,7 +232,7 @@ export default function Projects() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
+                                    <Button size="small" color="primary" href="https://github.com/niainamahefa/flutter-qrcode">
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
