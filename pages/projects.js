@@ -106,7 +106,7 @@ export default function Projects() {
                         </Typography>
                     {/* End hero unit */}
                     <Grid container spacing={2}>
-                        <Grid item  xs={12} sm={6} md={4}>
+                    <Grid item  xs={12} sm={6} md={4}>
                                 <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h6" component="h2" color="secondary">
@@ -128,6 +128,8 @@ export default function Projects() {
                                         </Button>
                                     </CardActions>
                                 </Card>
+                        </Grid>
+                        <Grid item  xs={12} sm={6} md={4}>
                                 <Card className={classes.card} style={{ backgroundColor: '#152133' }} variant="outlined"> 
                                     <CardContent className={classes.cardContent}>
                                         <Typography gutterBottom variant="h6" component="h2" color="secondary">

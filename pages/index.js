@@ -19,9 +19,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    particlesCanvas: {
-        position:"absolute",
-    },
     icon: {
         marginRight: theme.spacing(2),
     },
@@ -77,38 +74,6 @@ export default function Album() {
                     }
                 }
             }}>
-
-                <Particles
-                    canvasClassName={classes.particlesCanvas}
-                    params={{
-                        particles: {
-                            number: {
-                                value: 25,
-                                density: {
-                                    enable: true,
-                                    value_area:900
-                                }
-                            },
-                            shape: {
-                                type: "circle",
-                                strole: {
-                                    width: 1,
-                                    color: "#fff"
-                                }
-                            },
-                            size: {
-                                value: 5,
-                                random: true,
-                                anim: {
-                                    enable: false,
-                                    speed: 10,
-                                    size_min: 0.1,
-                                    sync: false
-                                }
-                            }
-                        }
-                    }}
-                />
                 {/* Hero unit */}
 
                 <Container maxWidth="md" style={{marginTop : '15%'}}>
