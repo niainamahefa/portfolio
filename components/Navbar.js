@@ -18,7 +18,6 @@ import ListIcon from '@material-ui/icons/List';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import AppsIcon from '@material-ui/icons/Apps';
 import { motion } from 'framer-motion'
 
 
@@ -77,13 +76,13 @@ export default function Navbar() {
                         </Typography>
                           <div>
                             <Button
-                            style={{ color: '#fff'}}
+                              style={{color: '#fff'}}
                               ref={anchorRef}
                               aria-controls={open ? 'menu-list-grow' : undefined}
                               aria-haspopup="true"
                               onClick={handleToggle}
                             >
-                              <AppsIcon />  Menu
+                              <MenuIcon />  Menu
                             </Button>
                             <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                               {({ TransitionProps, placement }) => (
