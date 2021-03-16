@@ -162,7 +162,7 @@ export default function Contact() {
                                     className={classes.buttonSend}
                                     startIcon={<SendIcon />}
                                 >
-                                    Envoyer
+                                    Send
                                 </Button>
                             </form>
                         </Container>

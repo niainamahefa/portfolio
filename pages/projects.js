@@ -166,10 +166,7 @@ export default function Projects() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href="http://dapa.mcc.gov.mg">
-                                        <GitHubIcon style={{ color: '#EE4437' }} />
-                                    </Button>
-                                    <Button size="small" color="primary">
+                                    <Button size="small" color="primary" href="https://dapa.mcc.gov.mg">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
@@ -211,11 +208,6 @@ export default function Projects() {
                                         <img className={classes.img} src="/images/skills/symfony.png" />
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button size="small" color="primary">
-                                        <GitHubIcon style={{ color: '#EE4437' }} />
-                                    </Button>
-                                </CardActions>
                             </Card>
                         </Grid>
                         <Grid item  xs={12} sm={6} md={4}>
@@ -254,9 +246,6 @@ export default function Projects() {
                                 <CardActions>
                                     <Button size="small" color="primary" href="https://github.com/niainamahefa/j2ee-sekoliko">
                                         <GitHubIcon style={{ color: '#EE4437' }} />
-                                    </Button>
-                                    <Button size="small" color="primary">
-                                        <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
                             </Card>
