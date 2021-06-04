@@ -189,7 +189,7 @@ export default function Projects() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href="https://dapa.mcc.gov.mg">
+                                    <Button size="small" color="primary" href="http://dapa.mcc.gov.mg">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
