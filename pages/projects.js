@@ -212,7 +212,7 @@ export default function Projects() {
                                     <Button size="small" color="primary" href="https://github.com/niainamahefa/wordpress-evidy">
                                         <GitHubIcon style={{ color: '#EE4437' }} />
                                     </Button>
-                                    <Button size="small" color="primary">
+                                    <Button size="small" color="primary"  href="http://www.younggeek.byethost22.com/">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
