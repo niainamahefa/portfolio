@@ -110,6 +110,26 @@ export default function Projects() {
                             <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                       Annuaire Cameroun
+                                    </Typography>
+                                    <Typography gutterBottom style={{ color: '#fff' }}>
+                                        The directory of professionals in Cameroon
+                                    </Typography>
+                                    <Typography style={{ color: '#919090' }}>
+                                        <img className={classes.img} src="/images/skills/wordpress.png" />
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary" href="https://annuairecm.pro/">
+                                        <LinkIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item  xs={12} sm={6} md={4}>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
                                        Fototra
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
