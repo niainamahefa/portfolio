@@ -120,7 +120,7 @@ export default function Projects() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href="https://https://ishinomakiya.com/">
+                                    <Button size="small" color="primary" href="https://ishinomakiya.com">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
