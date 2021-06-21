@@ -110,17 +110,17 @@ export default function Projects() {
                             <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                       Annuaire Cameroun
+                                       Ishinomakiya
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        The directory of professionals in Cameroon
+                                        The business management software magazine
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/wordpress.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href="https://annuairecm.pro/">
+                                    <Button size="small" color="primary" href="https://https://ishinomakiya.com/">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
@@ -215,24 +215,21 @@ export default function Projects() {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item  xs={12} sm={6} md={4}>
-                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }}>
+                         <Grid item  xs={12} sm={6} md={4}>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6" component="h2" color="secondary">
-                                        E-Vidy
+                                       Annuaire Cameroun
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
-                                        E-commerce website.
+                                        The directory of professionals in Cameroon
                                     </Typography>
                                     <Typography style={{ color: '#919090' }}>
                                         <img className={classes.img} src="/images/skills/wordpress.png" />
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href="https://github.com/niainamahefa/wordpress-evidy">
-                                        <GitHubIcon style={{ color: '#EE4437' }} />
-                                    </Button>
-                                    <Button size="small" color="primary"  href="http://www.younggeek.byethost22.com/">
+                                    <Button size="small" color="primary" href="https://annuairecm.pro/">
                                         <LinkIcon style={{ color: '#EE4437' }} />
                                     </Button>
                                 </CardActions>
