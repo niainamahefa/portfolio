@@ -110,6 +110,26 @@ export default function Projects() {
                             <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h6" component="h2" color="secondary">
+                                       Fondation Simafri
+                                    </Typography>
+                                    <Typography gutterBottom style={{ color: '#fff' }}>
+                                        Website for Simafri Foundation
+                                    </Typography>
+                                    <Typography style={{ color: '#919090' }}>
+                                        <img className={classes.img} src="/images/skills/wordpress.png" />
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary" href="https://fondationsimafri.org/">
+                                        <LinkIcon style={{ color: '#EE4437' }} />
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item  xs={12} sm={6} md={4}>
+                            <Card className={classes.card} style={{ backgroundColor: '#0d1727' }} variant="outlined">
+                                <CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant="h6" component="h2" color="secondary">
                                        Dolibackup
                                     </Typography>
                                     <Typography gutterBottom style={{ color: '#fff' }}>
